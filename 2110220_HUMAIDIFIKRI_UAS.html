@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Pemesanan Tiket Maskapai</h4>
+    <h5>============================</h5>
+    <form id="uas" onsubmit="return cek();">
+        Nama = <input type="text" name="" id="nama"><br>
+        Jumlah Tiket = <input type="text" name="" id="jml"><br>
+        Kelas = <select  id="kls">
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Bisnis">Bisnis</option>
+            <option value="Eksekutif">Eksekutif</option>
+        </select><br>
+        Tujuan = <select  id="tuj">
+            <option value="Bali">Bali</option>
+            <option value="Yogyakarta">Yogyakarta</option>
+            <option value="Semarang">Semarang</option>
+        </select><br>
+        Bagasi = <input type="radio" name="bgs" id="bgs" value="5kg">5kg
+                <input type="radio" name="bgs" id="bgs" value="10kg">10kg
+                <input type="radio" name="bgs" id="bgs" value="15kg">15kg <br>
+        Asuransi = <input type="checkbox" name="asu" value="Asuransi Jiwa" id="asu">Asuransi Jiwa 
+                    <input type="checkbox" name="asu" value="Asuransi Kecelakaan" id="asu">Asuransi Kecelakaan 
+                    <input type="checkbox" name="asu" value="Asuransi Keterlambatan" id="asu">Asuransi Keterlambatan <br>
+
+        <input type="submit" value="Simpan">
+
+        <div id="Hasil"></div>
+    </form>
+
+    <script type="text/javascript">
+        function cek(){
+            var nama=document.getElementById('nama').value;
+            var jml=document.getElementById('jml').value;
+            var kls=document.getElementById('kls').value;
+            var tuj=document.getElementById('tuj').value;
+            var bgs=document.querySelector("input[name=bgs]:checked").value;
+            var asu=document.getElementById('asu').value;
+
+            
+            
+            
+            document.getElementById('Hasil').innerHTML="Nama="+nama+"<br>Jumlah Tiket="+jml+"<br>Kelas="+kls+"<br>Tujuan = "+tuj+"<br>Bagasi = "+bgs+"<br>Asuransi = "+asu;
+            return false;
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
